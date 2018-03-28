@@ -6,4 +6,4 @@ RUN \
         memcached && \
     /usr/local/sbin/docker-cleanup
 
-CMD ["/usr/share/memcached/scripts/start-memcached", "/etc/memcached.conf"]
+CMD ["/usr/bin/memcached", "-m", "64", "-p" ,"11211", "-u", "memcache", "-l", "127.0.0.1"]
